@@ -19,18 +19,22 @@ end
 
 def score
   total = 0
+  word_array = @word.split(' ')
   if @word == " " || @word == nil || @word.empty?
     total += 0
     return 0
   end
+
+  if @word.length > 1
+    word_array.each do |w|
+    puts w.upcase
+    #total += sum
+    end
+  end
+
 end
 
-def total(word)
-  #loop through points and get key value corresponding to each
-  #word character
 end
 
-end
-
-scrabble = Scrabble.new("HELLO")
+scrabble = Scrabble.new("Hello World")
 scrabble.score
